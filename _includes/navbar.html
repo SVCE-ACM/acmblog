@@ -1,1 +1,34 @@
 <!-- Navbar which will be present at the top of all pages.-->
+<style>#mainNav{background-color:white}#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:white;border:0;background-color:#0182AC;font-family:'Exo 2',sans-serif}#mainNav .navbar-brand{padding:0!important}#mainNav .navbar-brand img{height:50px}#mainNav .navbar-nav .nav-item .nav-link{font-size:90%;font-weight:600;padding:.75em 0;letter-spacing:1px;color:black;font-family:'Exo 2',sans-serif}#mainNav .navbar-nav .nav-item .nav-link.active,#mainNav .navbar-nav .nav-item .nav-link:hover{color:#0182AC}@media (min-width:992px){#mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top 0.3s,padding-bottom 0.3s;-moz-transition:padding-top 0.3s,padding-bottom 0.3s;transition:padding-top 0.3s,padding-bottom 0.3s;border:none;background-color:transparent}#mainNav .navbar-brand{font-size:1.75em;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s}#mainNav .navbar-nav .nav-item .nav-link{padding:1.1em 1em!important}#mainNav.navbar-shrink{padding-top:0;padding-bottom:0;background-color:white}#mainNav.navbar-shrink .navbar-brand{font-size:1.25em}}</style>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand" href="#page-top"><img src={{ "assets/brandlogo.png" | relative_url }}></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+                <li class="nav-item">
+                    <a id="home-link" class="nav-link" href={{ "/" | relative_url }}>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a id="student-affairs-link" class="nav-link" href="#">Student Affairs</a>
+                </li>
+                <li class="nav-item">
+                    <a id="professors-corner-link" class="nav-link" href="#">Professors' Corner</a>
+                </li>
+                <li class="nav-item active">
+                    <a id="alumni-link" class="nav-link" href="#">Alumni</a>
+                </li>
+                <li class="nav-item">
+                    <a id="about-link" class="nav-link" href={{ "/about" | relative_url }}>About</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- #nav -->
+<script>
+    $("#{{ include.navid }}").addClass('active');
+    $("#{{ include.navid }}").removeAttr("href");
+</script>

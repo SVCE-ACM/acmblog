@@ -4,4 +4,5 @@
 
 layout: feed
 title: Home
+navid: home-link
 ---
