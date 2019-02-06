@@ -1,12 +1,14 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2019-02-05 18:37:41 +0530
-categories: jekyll update
-permalink: /x
+title:  "Welcome to custom post"
+date:   2019-02-04 18:37:41 +0530
+categories: jekyll tag
+permalink: /y
 featured-img: https://cdn-images-1.medium.com/max/2600/1*S6-NCtp-bNCxp7X9jBqH-Q.jpeg
 ---
-Blah find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+![Ypo](https://cdn-images-1.medium.com/max/2600/1*S6-NCtp-bNCxp7X9jBqH-Q.jpeg)
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 

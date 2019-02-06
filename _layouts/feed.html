@@ -3,11 +3,42 @@
 <head>
 	{% include header.html %}
 </head>
+<style>
+#main-container{
+	margin-top: 80px;
+	padding: 40px;
+}
+.card-wrapper {
+	margin: 20px auto;
+}
+.card-img-top {
+  object-fit: cover;
+  min-height: 125px;
+}
+</style>
 <body>
 	<!-- navid is a custom variable that should be specified in the pages. It is used to highlight the active page in the navbar -->
 	{% include navbar.html navid=page.navid %}
-	
+	<div id="main-container" class="container">
+		<h1 class="text-center">{{ page.title }}</h1>
+	  	<div class="row">
+		{% for post in site.posts %}
+			<div class="card-wrapper col-lg-8 offset-lg-2">
+			  	<div class="card">
+				    <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
+				    <div class="card-body">
+				    	<h2 class="card-title text-center">{{ post.title }}</h2>
+				    	<p class="card-excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href={{ post.url | relative_url }}>Read More</a></p>
+				    </div> <!-- card-body -->
+				</div> <!-- card -->
+			</div> <!-- col-lg-8 -->
+		{% endfor %}
+		</div> <!-- row -->
+	</div> <!-- container -->
 </body>
 </html>
 
+				<img src="{{ post.featured-img }}" alt="">
+				<a href="{{ post.url }}">{{ post.title }}</a>
+				<!-- <p>{{ post.excerpt }}</p> -->
 <!-- Template for a blog feed -->
