@@ -29,6 +29,8 @@
 				    <div class="card-body">
 				    	<h2 class="card-title text-center">{{ post.title }}</h2>
 				    	<p class="card-excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href={{ post.url | relative_url }}>Read More</a></p>
+				    	<p class="post-info text-right"><span class="post-date">At {{ post.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ post.author }}</span></p><!-- .post-date -->
+				    	<!-- .post-author -->
 				    </div> <!-- card-body -->
 				</div> <!-- card -->
 			</div> <!-- col-lg-8 -->

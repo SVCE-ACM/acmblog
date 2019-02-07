@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to custom post"
 date:   2019-02-04 18:37:41 +0530
+author: Yuvaraj
 categories: jekyll tag
 permalink: /y
 featured-img: https://cdn-images-1.medium.com/max/2600/1*S6-NCtp-bNCxp7X9jBqH-Q.jpeg

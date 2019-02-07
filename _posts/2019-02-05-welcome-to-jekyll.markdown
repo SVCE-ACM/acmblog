@@ -2,6 +2,7 @@
 layout: post
 title:  "Welcome to Jekyll!"
 date:   2019-02-05 18:37:41 +0530
+author: Tyler
 categories: jekyll update
 permalink: /x
 featured-img: https://cdn-images-1.medium.com/max/2600/1*S6-NCtp-bNCxp7X9jBqH-Q.jpeg
