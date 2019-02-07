@@ -1,1 +1,138 @@
 <!-- Footer of the site which will be present in all the pages -->
+<style>
+	#footer {
+		background: #111;
+		color: #ccc;
+	}
+
+	#footer .container {
+		padding: 30px;
+	}
+	#left-footer {
+		border-right: 3px solid #333;
+	}
+	#newsletter {
+		display: flex;		
+	    flex-direction: column;
+		margin: 15px auto 30px;
+	}
+	#newsletter h2 {
+		margin-bottom: 15px;
+	}
+	#social-buttons {
+		display: flex;
+	    justify-content: space-evenly;
+	    max-width: 60%;
+	    margin-bottom: 30px;
+	}
+	#social-buttons a {
+		text-decoration: none;
+		color: #ccc;
+	}
+
+	#main-site-link {
+		text-decoration: underline;
+		font-size: 1.3em;
+		color: #555;
+	}
+    .list-inline-item {
+		border-color: #111;
+	    border-radius: 50%;
+	    background: black;
+	    width: 55px;
+	    height: 55px;
+	    display: inline-flex;
+	    justify-content: center;
+	    align-items: center;
+	}
+
+	.contact-item {
+		display: flex;
+		margin: 0 auto 5px;
+		/*align-items: baseline;*/
+		/*justify-content: */
+	}
+
+	.contact-address {
+		margin-left: 10px;
+		font-size: 1.3em;
+	}
+
+	.contact-address a {
+		color: #999;
+		text-decoration: none;
+	}
+
+	#feedback {
+		margin-top: 20px;
+	}
+	#contact-form * {
+		margin-bottom: 10px;
+	}
+
+	@media screen and (max-width: 1024px) {
+		#social-buttons {
+			max-width: 90%;
+		}
+	}
+
+</style>
+<footer id="footer">
+	<div class="container">
+	    <div class="row">
+	        <div id="left-footer" class="col-md-6">
+	            <div id="newsletter">
+	                <h2>Subscribe to our newsletter</h2>
+	                <form id="newsletter-sub" action="#">
+	                    <input type="email" placeholder="Enter your email" required>
+	                    <button class="submit" type="submit">Subscribe</button>
+	                </form>
+	            </div><!-- #newsletter -->
+	            <div id="social-buttons">
+	                <a href="https://www.facebook.com/SVCEACM/">
+						<div class="list-inline-item">
+							<i class="fab fa-facebook-f fa-fw fa-2x"></i>
+						</div><!-- .list-inline-item -->
+					</a>
+	                <a href="https://twitter.com/acm_svce">
+						<div class="list-inline-item">
+							<i class="fab fa-twitter fa-fw fa-2x"></i>
+						</div><!-- .list-inline-item -->
+					</a>
+	     	    	<a href="https://www.instagram.com/svceacm/">
+						<div class="list-inline-item">
+							<i class="fab fa-instagram fa-fw fa-2x"></i>
+						</div><!-- .list-inline-item -->
+					</a>
+	                <a href="https://github.com/SVCE-ACM">
+						<div class="list-inline-item">
+							<i class="fab fa-github fa-fw fa-2x"></i>
+						</div><!-- .list-inline-item -->
+					</a>
+	            </div><!-- #social-buttons -->
+	            <a href="http://svce.acm.org/" id="main-site-link"><h4>Back to main site</h4></a>
+	        </div><!-- .col-md-6 -->
+	        <div class="col-md-6">
+	            <div id="contact-info">
+	            	<h2>Contact Us</h2><!-- .text-center -->
+	            	<div id="phone" class="contact-item">
+	            		<i class="fas fa-phone-square fa-2x fa-fw"></i>
+	            		<span id="phone-no" class="contact-address"><a href="tel:+919962754468">(+91) 99627 54468</a></span>
+	            	</div>
+	            	<div id="email" class="contact-item">
+	            		<i class="fas fa-envelope fa-2x fa-fw"></i>
+	            		<span id="email-id" class="contact-address"><a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a></span>
+	            	</div>
+	            </div><!-- #contact -->
+	            <div id="feedback">
+	            	<h2>Have any feedback?</h2>
+	            	<form id="contact-form" action="#">
+	            		<input type="text" name="name" placeholder="Your name"><br>
+	            		<textarea name="feedback-text" cols="40" rows="4" placeholder="Enter your feedback"></textarea><br>
+	            		<button class="submit" type="submit">Submit</button>
+	            	</form>
+	            </div><!-- #contact-form -->
+	        </div><!-- .col-md-6 -->
+	    </div><!-- .row -->
+	</div><!-- .container -->
+</footer><!-- #footer -->
