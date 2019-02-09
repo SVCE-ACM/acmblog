@@ -2,11 +2,42 @@
 <html lang="en">
 <head>
 	{% include header.html %}
+	<style>
+		#main-container {
+			padding: 80px;
+		}
+
+		#post-container {
+			padding-right: 50px;
+		}
+		.featured-img {
+			width: 100%;
+		}
+		#sidebar {
+			border-left: 2px solid #ddd;
+			padding: 0 40px;
+		}
+	</style>
+	
 </head>
 <body>
 	{% include navbar.html %}
 	<!-- navid is a custom variable that should be specified in the pages. It is used to highlight the active page in the navbar -->
-	{{ content }}
+	<div>
+		<img src="{{ page.featured-img }}" class="featured-img">
+	</div><!-- .featured-img -->
+	<div id="main-container" class="container-fluid">
+		<div class="row">
+			<div id="post-container" class="col-md-6 offset-md-3">{{ content }}</div><!-- #main-container.container-fluid -->
+			<div id="sidebar" class="col-md-3">
+                {% include sidebar_large.html %}
+            </div><!-- #sidebar.col-md-3 -->
+		</div><!-- .row -->
+	</div><!-- #main-container.container-fluid -->
+    {% include footer.html %}
+	<script>
+		$('.featured-img').css("margin-top", $('nav').height());
+	</script>
 </body>
 </html>
 
