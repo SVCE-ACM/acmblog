@@ -1,75 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	{% include header.html %}
+    {% include header.html %}
 </head>
 <style>
-#main-container{
-	margin-top: 80px;
-	padding: 40px;
+#main-container {
+    margin-top: 80px;
+    padding: 40px;
 }
+
 .card-wrapper {
-	margin: 20px auto;
+    margin: 20px auto;
 }
+
 .card-img-top {
-  object-fit: cover;
-  min-height: 125px;
+    object-fit: cover;
+    min-height: 125px;
 }
-#sidebar_position{
-	float:right;
-	width:20%;
+
+#ad {
+	margin-top: 30vh;
+}
+#sidebar {
+	/*display: flex;*/
+}
+#sidebar_inner {
+    /*float:right;*/
+   /* display: flex;
+    flex-direction: column;*/
 }
 </style>
+
 <body>
-	<!-- navid is a custom variable that should be specified in the pages. It is used to highlight the active page in the navbar -->
-	{% include navbar.html navid=page.navid %}
-	<div id="main-container" class="container">
-		<h1 class="text-center">{{ page.title }}</h1>
-		<!--------sidebar---------->
-
-		<div id = "sidebar_position">
-		    <strong >Popular Articles</strong>
-		    <ul class = "list-group" style="list-style-type:none;">
-			  	<div class="borderless">
-				   <li ><a href="#">Article #1</a></li>
-				   <li><a href="#">Article #2</a></li>
-				   <li><a href="#">Article #3</a></li>
-				   <li><a href="#">Article #4</a></li>
-				   <li><a href="#">Article #5</a></li>
-				<div>
-			</ul>
-
-					<!----ads section --------->
-		    <ul class = "list-group" style="list-style-type:none;">
-		  		<div class="borderless">
-					<img src="http://videoadnews.com/wp-content/uploads/2018/03/mcdonalds.jpg" class="img-fluid" alt="Responsive image">
-			
-			 	<div>
-		   </ul>	
-
-		</div>
-
-	  	<div class="row">
-		{% for post in site.posts %}
-			<div class="card-wrapper col-lg-8 offset-lg-2">
-			  	<div class="card">
-				    <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
-				    <div class="card-body">
-				    	<h2 class="card-title text-center">{{ post.title }}</h2>
-				    	<p class="card-excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href={{ post.url | relative_url }}>Read More</a></p>
-				    	<p class="post-info text-right"><span class="post-date">At {{ post.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ post.author }}</span></p><!-- .post-date -->
-				    	<!-- .post-author -->
-				    </div> <!-- card-body -->
-				</div> <!-- card -->
-			</div> <!-- col-lg-8 -->
-		{% endfor %}
-		</div> <!-- row -->
-	</div> <!-- container -->
-	{% include footer.html %}
+    <!-- navid is a custom variable that should be specified in the pages. It is used to highlight the active page in the navbar -->
+    {% include navbar.html navid=page.navid %}
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div id="feed-container" class="container">
+                    <h1 class="text-center">{{ page.title }}</h1>
+                    <div class="row">
+                        {% for post in site.posts %}
+                        <div class="card-wrapper col-md-10 offset-md-1">
+                            <div class="card">
+                                <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">{{ post.title }}</h2>
+                                    <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href={{ post.url | relative_url }}>Read More</a></p>
+                                    <p class="post-info text-right"><span class="post-date">At {{ post.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ post.author }}</span></p><!-- .post-date -->
+                                    <!-- .post-author -->
+                                </div> <!-- card-body -->
+                            </div> <!-- card -->
+                        </div> <!-- col-lg-8 -->
+                        {% endfor %}
+                    </div> <!-- row -->
+                </div><!-- #feed-container.container -->
+            </div><!-- .col-md-8 offset-md-2 -->
+            <div id="sidebar" class="col-md-3">
+                <div id="sidebar_inner">
+                    <div id="popular-articles">
+                        <h3 class="sidebar-title">Popular Articles</h3><!-- .sidebar-title -->
+                        <ul class="list-group" style="list-style-type:none;">
+                            <div class="borderless">
+                                <li><a href="#">Article #1</a></li>
+                                <li><a href="#">Article #2</a></li>
+                                <li><a href="#">Article #3</a></li>
+                                <li><a href="#">Article #4</a></li>
+                                <li><a href="#">Article #5</a></li>
+                                <div>
+                        </ul>
+                    </div><!-- #popular-articles -->
+                    <!----ads section --------->
+                    <div id="ad">
+                        <ul class="list-group" style="list-style-type:none;">
+                            <div class="borderless">
+                                <img src="http://videoadnews.com/wp-content/uploads/2018/03/mcdonalds.jpg" class="img-fluid" alt="Responsive image">
+                            <div>
+                        </ul>
+                    </div><!-- #ad -->
+                </div>
+            </div><!-- .col-md-2 -->
+        </div><!-- .row -->
+    </div> <!-- container -->
+    {% include footer.html %}
 </body>
-</html>
 
-				<img src="{{ post.featured-img }}" alt="">
-				<a href="{{ post.url }}">{{ post.title }}</a>
-				<!-- <p>{{ post.excerpt }}</p> -->
+</html>
+<!-- <p>{{ post.excerpt }}</p> -->
 <!-- Template for a blog feed -->
