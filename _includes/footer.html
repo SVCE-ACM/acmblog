@@ -4,12 +4,25 @@
 		background: #111;
 		color: #ccc;
 	}
-
+	
 	#footer .container {
 		padding: 30px;
 	}
+	form * {
+		border-radius: 3px;
+	}
+	.submit {
+		background: rgb(1, 130, 172);
+		cursor: pointer;
+		border: none;
+		color: white;
+		padding: 3px;
+	}
 	#left-footer {
 		border-right: 3px solid #333;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
 	}
 	#newsletter {
 		display: flex;		
@@ -27,7 +40,7 @@
 	}
 	#social-buttons a {
 		text-decoration: none;
-		color: #ccc;
+		color: rgb(1, 130, 172);
 	}
 
 	.main-site-link {
@@ -35,10 +48,13 @@
 		font-size: 1.3em;
 		color: #555;
 	}
+	.main-site-link:hover {
+		color: rgb(1, 130, 172);
+	}
     .list-inline-item {
 		border-color: #111;
 	    border-radius: 50%;
-	    background: black;
+	    background: #222;
 	    width: 55px;
 	    height: 55px;
 	    display: inline-flex;
