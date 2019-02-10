@@ -3,11 +3,16 @@
 <head>
 	{% include header.html %}
 	<style>
-		#main-container {
-			padding: 80px;
+		body {
+			font-size: 16px;
 		}
-
-		#post-container {
+		#main-container {
+			padding: 20px;
+		}
+		#content-row {
+			padding: 40px;
+		}
+		#post-column {
 			padding-right: 50px;
 		}
 		.featured-img {
@@ -15,7 +20,31 @@
 		}
 		#sidebar {
 			border-left: 2px solid #ddd;
-			padding: 0 40px;
+		}
+		.post-title {
+			font-family: 'Playfair Display', sans-serif;
+			font-size: 3.5em;
+			margin-bottom: 0.75em;
+			line-height: 
+		}
+		.post-content {
+			max-width: 740px;
+			margin: 0 auto;
+			font-family: 'Roboto', sans-serif;
+			font-size: 1.1em;
+		}
+		@media screen and (max-width: 1024px) {
+			#main-container {
+				padding: 40px;
+			}
+			#sidebar {
+				display: none;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			#main-container {
+				padding: 20px;
+			}
 		}
 	</style>
 	
@@ -24,19 +53,30 @@
 	{% include navbar.html %}
 	<!-- navid is a custom variable that should be specified in the pages. It is used to highlight the active page in the navbar -->
 	<div>
-		<img src="{{ page.featured-img }}" class="featured-img">
 	</div><!-- .featured-img -->
 	<div id="main-container" class="container-fluid">
 		<div class="row">
-			<div id="post-container" class="col-md-6 offset-md-3">{{ content }}</div><!-- #main-container.container-fluid -->
-			<div id="sidebar" class="col-md-3">
+			<div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
+				<div class="post-title"><h1>{{ page.title }}</h1></div><!-- .post-title -->
+			</div>
+		</div><!-- .row -->
+		<div class="row">
+			<div class="col-lg-8 offset-lg-2 col-md-12">
+				<img src="{{ page.featured-img }}" class="featured-img">
+			</div><!-- .col-lg-8 offset-lg-2 col-md-12 -->
+		</div><!-- .row -->
+		<div id="content-row" class="row">
+			<div id="post-column" class="col-lg-8 offset-lg-2">
+				<div class="post-content">{{ content }}</div><!-- .post-content -->
+			</div><!-- #post-column -->
+			<div id="sidebar" class="col-lg-2">
                 {% include sidebar_large.html %}
-            </div><!-- #sidebar.col-md-3 -->
+            </div><!-- #sidebar.col-lg-3 -->
 		</div><!-- .row -->
 	</div><!-- #main-container.container-fluid -->
     {% include footer.html %}
 	<script>
-		$('.featured-img').css("margin-top", $('nav').height());
+		$('#main-container').css("margin-top", $('nav').height());
 	</script>
 </body>
 </html>

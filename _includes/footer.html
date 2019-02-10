@@ -30,7 +30,7 @@
 		color: #ccc;
 	}
 
-	#main-site-link {
+	.main-site-link {
 		text-decoration: underline;
 		font-size: 1.3em;
 		color: #555;
@@ -70,10 +70,30 @@
 		margin-bottom: 10px;
 	}
 
+	.footer-title {
+		font-family: 'Montserrat', sans-serif;
+	}
+
+	#main-site-link-sm {
+		display: none;
+	}
+
 	@media screen and (max-width: 1024px) {
 		#social-buttons {
 			max-width: 90%;
 		}
+
+	}
+	@media screen and (max-width: 768px) {
+		#main-site-link-lg {
+			display: none;
+		}
+		#main-site-link-sm {
+			display: block;
+		}
+		#left-footer {
+			border-right: none;
+		}		
 	}
 
 </style>
@@ -82,7 +102,7 @@
 	    <div class="row">
 	        <div id="left-footer" class="col-md-6">
 	            <div id="newsletter">
-	                <h2>Subscribe to our newsletter</h2>
+	                <h2 class="footer-title">Subscribe to our newsletter</h2>
 	                <form id="newsletter-sub" action="#">
 	                    <input type="email" placeholder="Enter your email" required>
 	                    <button class="submit" type="submit">Subscribe</button>
@@ -110,11 +130,11 @@
 						</div><!-- .list-inline-item -->
 					</a>
 	            </div><!-- #social-buttons -->
-	            <a href="http://svce.acm.org/" id="main-site-link"><h4>Back to main site</h4></a>
+	            <a href="http://svce.acm.org/" class="main-site-link" id="main-site-link-lg"><h4>Back to main site</h4></a>
 	        </div><!-- .col-md-6 -->
 	        <div class="col-md-6">
 	            <div id="contact-info">
-	            	<h2>Contact Us</h2><!-- .text-center -->
+	            	<h2 class="footer-title">Contact Us</h2><!-- .text-center -->
 	            	<div id="phone" class="contact-item">
 	            		<i class="fas fa-phone-square fa-2x fa-fw"></i>
 	            		<span id="phone-no" class="contact-address"><a href="tel:+919962754468">(+91) 99627 54468</a></span>
@@ -125,13 +145,15 @@
 	            	</div>
 	            </div><!-- #contact -->
 	            <div id="feedback">
-	            	<h2>Have any feedback?</h2>
+	            	<h2 class="footer-title">Have any feedback?</h2>
 	            	<form id="contact-form" action="#">
 	            		<input type="text" name="name" placeholder="Your name"><br>
 	            		<textarea name="feedback-text" cols="40" rows="4" placeholder="Enter your feedback"></textarea><br>
 	            		<button class="submit" type="submit">Submit</button>
 	            	</form>
 	            </div><!-- #contact-form -->
+	            <a href="http://svce.acm.org/" class="main-site-link" id="main-site-link-sm"><h4>Back to main site</h4></a>
+
 	        </div><!-- .col-md-6 -->
 	    </div><!-- .row -->
 	</div><!-- .container -->
