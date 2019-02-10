@@ -7,16 +7,25 @@
 <style>
 #main-container {
     margin-top: 80px;
-    padding: 40px;
+    padding: 20px;
 }
-
-.card-wrapper {
+.feed-title {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+}
+.card {
+	max-width: 630px;
     margin: 20px auto;
 }
-
+.card-title {
+	font-family: 'Playfair Display', sans-serif;
+}
 .card-img-top {
     object-fit: cover;
-    min-height: 125px;
+    max-height: 200px;
+}
+#sidebar {
+	padding-top: 90px;	
 }
 
 
@@ -27,27 +36,27 @@
     {% include navbar.html navid=page.navid %}
     <div id="main-container" class="container-fluid">
         <div class="row">
-            <div class="col-md-6 offset-md-3">
-                <div id="feed-container" class="container">
-                    <h1 class="text-center">{{ page.title }}</h1>
-                    <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <!-- <div id="feed-container" class="container"> -->
+                    <h1 class="feed-title text-center">{{ page.title }}</h1>
+                    <!-- <div class="row"> -->
                         {% for post in site.posts %}
-                        <div class="card-wrapper col-md-10 offset-md-1">
+                        <!-- <div class="card-wrapper"> -->
                             <div class="card">
                                 <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
                                 <div class="card-body">
-                                    <h2 class="card-title text-center">{{ post.title }}</h2>
+                                    <h2 class="card-title">{{ post.title }}</h2>
                                     <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 50 }} <a href={{ post.url | relative_url }}>Read More</a></p>
                                     <p class="post-info text-right"><span class="post-date">At {{ post.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ post.author }}</span></p><!-- .post-date -->
                                     <!-- .post-author -->
                                 </div> <!-- card-body -->
                             </div> <!-- card -->
-                        </div> <!-- col-lg-8 -->
+                        <!-- </div>card-wrapper -->
                         {% endfor %}
-                    </div> <!-- row -->
-                </div><!-- #feed-container.container -->
+                    <!-- </div> row -->
+                <!-- </div>#feed-container.container -->
             </div><!-- .col-md-6 offset-md-3 -->
-            <div id="sidebar" class="col-md-3">
+            <div id="sidebar" class="col-lg-2">
                 {% include sidebar_large.html %}
             </div><!-- #sidebar.col-md-3 -->
         </div><!-- .row -->

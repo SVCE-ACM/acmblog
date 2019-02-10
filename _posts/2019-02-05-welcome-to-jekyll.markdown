@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Jekyll! Lorem ipsum dolor sit amet, consectetur adipisicing."
 date:   2019-02-05 18:37:41 +0530
 author: Tyler
 categories: jekyll update
 permalink: /x
-featured-img: https://cdn-images-1.medium.com/max/2600/1*S6-NCtp-bNCxp7X9jBqH-Q.jpeg
+featured-img: https://cdn-images-1.medium.com/max/1100/1*wPs5_lAqG8qPpxjzdVR4ng.jpeg
 ---
 Blah find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
