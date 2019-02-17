@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include header.html %}
+</head>
+<style>
+a {
+	color: rgb(1, 130, 172);
+}
+a:hover {
+	color: rgb(9, 53, 122);
+}
+#main-container {
+    /*margin-top: 80px;*/
+    padding: 80px;
+}
+.feed-title {
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 40px;
+}
+.card {
+    margin: 20px auto;
+    border-color: rgba(0,0,0,0.2);
+}
+.card-title {
+	font-family: 'Playfair Display', sans-serif;
+    /*max-height: 3.6em;*/
+    /*overflow: hidden;*/
+}
+.card-excerpt {
+	color: #777;
+    /*height: 4.5em;*/
+    /*overflow: hidden;*/
+}
+
+.post-link {
+    color: inherit;
+}
+.post-link:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+.post-info {
+	font-style: italic;
+    padding-top: 15px;
+}
+.card-img-top {
+    /*object-fit: cover;*/
+    max-width: 100%;
+    /*max-height: 200px;*/
+}
+#sidebar {
+	padding-top: 90px;	
+}
+#sidebar_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .post-details {
+        max-height: 12em;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 1024px) {
+	#sidebar {
+		display: none;
+	}
+    #main-container {
+        padding: 30px;
+        padding-top: 80px;
+    }
+    
+    .card-excerpt {
+        height: 4.5em;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #main-container {
+        padding: 10px;
+        padding-top: 80px;
+    }
+}
+
+
+</style>
+
+<body>
+    <!-- navid is a custom variable that should be specified in the pages. It is used to highlight the active page in the navbar -->
+    {% include navbar.html navid=page.navid %}
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-1">
+                
+                <div class="row">
+                    <!-- Putting the latest post at the top -->
+                    <div class="col-lg-12">
+                        <div class="card">
+                                <a href={{ site.posts.first.url | relative_url }}><img src="{{ site.posts.first.featured-img }}" alt="" class="card-img-top"></a>
+                                <div class="card-body">
+                                    <div class="post-details">
+                                        <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ site.posts.first.title }}</h2></a>
+                                        <p class="card-excerpt">{{ site.posts.first.content | strip_html | truncatewords: 100 }}</p>
+                                    </div><!-- .post-details -->
+                                    <p class="post-info text-right"><span class="post-date">At {{ site.posts.first.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ site.posts.first.author }}</span></p><!-- .post-date -->
+                                    <!-- .post-author -->
+                                </div> <!-- card-body -->
+                            </div> <!-- card -->
+                    </div><!-- .col-lg-12 -->
+                    <!-- Putting the remaining post in a two-col layout -->
+                    {% for post in site.posts %}
+                        {% if forloop.index > 1 %}
+                            <div class="col-lg-6">
+                                <div class="card">
+                                        <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
+                                        <div class="card-body">
+                                            <div class="post-details">
+                                                <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ post.title }}</h2></a>
+                                                <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 100 }}</p>
+                                            </div><!-- .post-details -->
+                                            <p class="post-info text-right"><span class="post-date">At {{ post.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ post.author }}</span></p><!-- .post-date -->
+                                            <!-- .post-author -->
+                                        </div> <!-- card-body -->
+                                    </div> <!-- card -->
+                            </div><!-- .col-lg-6 -->
+                        {% endif %}
+                    {% endfor %}
+                </div><!-- .row -->
+            </div>
+            <div id="sidebar" class="col-xl-3">
+                {% include sidebar_large.html %}
+            </div><!-- #sidebar.col-md-3 -->
+        </div><!-- .row -->
+    </div> <!-- container -->
+    {% include footer.html %}
+</body>
+
+</html>
+<!-- <p>{{ post.excerpt }}</p> -->
+<!-- Template for a blog feed -->
