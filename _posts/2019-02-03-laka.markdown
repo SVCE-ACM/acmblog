@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Laka laka"
+title:  "Lorem ipsum dolor sit amet, consectetur adipisicing."
 date:   2019-02-03 18:37:41 +0530
 author: Yuvaraj
 categories: jekyll tag
@@ -9,7 +9,7 @@ featured-img: https://cdn-images-1.medium.com/max/1100/1*wPs5_lAqG8qPpxjzdVR4ng.
 ---
 
 
-Lala lala laka laka `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nam reprehenderit, ullam quas repellendus doloremque incidunt dolor magnam sint! Eos, veritatis quod nostrum optio velit illo atque quisquam labore, vitae. Quasi, et soluta maiores ea alias sed quibusdam placeat illum quae nostrum, sequi sit repellendus, temporibus rem. Exercitationem, illo, vitae!
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "laila to Jekyll! Lorem ipsum dolor sit amet, consectetur adipisicing."
+title:  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, dicta."
 date:   2019-02-05 18:37:41 +0530
 author: Tyler
 categories: jekyll update

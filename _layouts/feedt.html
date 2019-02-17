@@ -5,6 +5,9 @@
     {% include header.html %}
 </head>
 <style>
+html {
+    overflow-x: hidden;
+}
 a {
 	color: rgb(1, 130, 172);
 }
@@ -25,13 +28,9 @@ a:hover {
 }
 .card-title {
 	font-family: 'Playfair Display', sans-serif;
-    /*max-height: 3.6em;*/
-    /*overflow: hidden;*/
 }
 .card-excerpt {
 	color: #777;
-    /*height: 4.5em;*/
-    /*overflow: hidden;*/
 }
 
 .post-link {
@@ -65,15 +64,21 @@ a:hover {
         overflow: hidden;
     }
 }
-@media screen and (max-width: 1024px) {
-	#sidebar {
-		display: none;
+@media screen and (max-width: 1200px) {
+	#sidebar_inner {
+		flex-direction: row;
+        justify-content: space-around;
 	}
+    #ad {
+        margin-top: auto !important;
+    }
     #main-container {
         padding: 30px;
         padding-top: 80px;
     }
-    
+    #sidebar {
+        padding: 40px;
+    }
     .card-excerpt {
         height: 4.5em;
         overflow: hidden;
@@ -84,6 +89,16 @@ a:hover {
     #main-container {
         padding: 10px;
         padding-top: 80px;
+    }
+    #sidebar {
+        padding: 20px 30px;
+    }
+    #sidebar_inner {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    #ad {
+        margin-top: 40px !important;
     }
 }
 
