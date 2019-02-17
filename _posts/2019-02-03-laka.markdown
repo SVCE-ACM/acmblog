@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postt
 title:  "Lorem ipsum dolor sit amet, consectetur adipisicing."
 date:   2019-02-03 18:37:41 +0530
 author: Yuvaraj
