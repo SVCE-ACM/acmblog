@@ -5,7 +5,7 @@
     {% include header.html %}
 </head>
 <style>
-html {
+body, html {
     overflow-x: hidden;
 }
 a {
@@ -34,7 +34,7 @@ a:hover {
 }
 
 .post-link:hover {
-    color: rgb(131,206,226);
+    color: rgba(1, 130, 172, 0.8);
     text-decoration: none;
 }
 .post-info {
@@ -107,11 +107,10 @@ a:hover {
     {% include navbar.html navid=page.navid %}
     <div id="main-container" class="container-fluid">
         <div class="row">
-            <div class="col-xl-8 offset-xl-1">
-                
+            <div class="col-xl-8 offset-xl-1">              
                 <div class="row">
                     <!-- Putting the latest post at the top -->
-                    <div class="col-lg-12">
+                    <div class="col-md-12">
                         <div class="card">
                                 <a href={{ site.posts.first.url | relative_url }}><img src="{{ site.posts.first.featured-img }}" alt="" class="card-img-top"></a>
                                 <div class="card-body">
@@ -127,7 +126,7 @@ a:hover {
                     <!-- Putting the remaining post in a two-col layout -->
                     {% for post in site.posts %}
                         {% if forloop.index > 1 %}
-                            <div class="col-lg-6">
+                            <div class="col-md-6">
                                 <div class="card">
                                         <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
                                         <div class="card-body">
