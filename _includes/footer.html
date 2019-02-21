@@ -29,6 +29,11 @@
 		flex-direction: column;
 		justify-content: space-around;
 	}
+	#right-footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
 	#newsletter {
 		display: flex;		
 	    flex-direction: column;
@@ -102,10 +107,6 @@
 		font-family: 'Montserrat', sans-serif;
 	}
 
-	#main-site-link-sm {
-		display: none;
-	}
-
 	@media screen and (max-width: 1024px) {
 		#social-buttons {
 			max-width: 90%;
@@ -113,15 +114,12 @@
 
 	}
 	@media screen and (max-width: 768px) {
-		#main-site-link-lg {
-			display: none;
-		}
-		#main-site-link-sm {
-			display: block;
-		}
 		#left-footer {
 			border-right: none;
 		}		
+		#contact-info {
+			margin-bottom: 20px;
+		}
 	}
 
 </style>
@@ -158,9 +156,8 @@
 						</div><!-- .list-inline-item -->
 					</a>
 	            </div><!-- #social-buttons -->
-	            <a href="http://svce.acm.org/" class="main-site-link" id="main-site-link-lg"><h4>Back to main site</h4></a>
 	        </div><!-- .col-md-6 -->
-	        <div class="col-md-6">
+	        <div id="right-footer" class="col-md-6">
 	            <div id="contact-info">
 	            	<h2 class="footer-title">Contact Us</h2><!-- .text-center -->
 	            	<div id="email" class="contact-item">
@@ -168,17 +165,17 @@
 	            		<span id="email-id" class="contact-address"><a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a></span>
 	            	</div>
 	            </div><!-- #contact -->
-	            <div id="feedback">
+	            <!-- <div id="feedback">
 	            	<h2 class="footer-title">Have any feedback?</h2>
 	            	<form id="contact-form" action="#">
 	            		<input type="text" name="name" placeholder="Your name"><br>
 	            		<textarea name="feedback-text" cols="40" rows="4" placeholder="Enter your feedback"></textarea><br>
 	            		<button class="submit" type="submit">Submit</button>
 	            	</form>
-	            </div><!-- #contact-form -->
-	            <a href="http://svce.acm.org/" class="main-site-link" id="main-site-link-sm"><h4>Back to main site</h4></a>
+	            </div>#contact-form -->
+	            <a href="http://svce.acm.org/" class="main-site-link"><h4>Back to main site</h4></a>
 
 	        </div><!-- .col-md-6 -->
 	    </div><!-- .row -->
 	</div><!-- .container -->
-</footer><!-- #footer -->
+</footer><!-- #footer
