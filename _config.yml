@@ -30,6 +30,14 @@ theme: minima
 plugins:
   - jekyll-feed
 
+#algolia search
+algolia:
+  application_id: 'BM7Z6NFPT5'
+  index_name: 'acmblog'
+  files_to_exclude: []
+  search_only_api_key: 'a90b5867f7165792629f5efc84a4835c'
+  nodes_to_index: 'article'
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

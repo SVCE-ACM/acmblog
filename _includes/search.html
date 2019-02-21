@@ -1,0 +1,37 @@
+<script>
+   const search = instantsearch({
+          appId: 'BM7Z6NFPT5',
+          apiKey: 'a90b5867f7165792629f5efc84a4835c',
+          indexName: 'acmblog',
+          routing: true,
+          searchParameters: {
+            hitsPerPage: 5,
+            attributesToSnippet: ["description:24"],
+            snippetEllipsisText: " [...]"
+       }
+    });
+
+    // initialize SearchBox
+    search.addWidget(
+        instantsearch.widgets.searchBox({
+          container: '#search-box',
+          placeholder: 'Search',
+          poweredBy: true
+        })
+    );
+
+  // // initialize hits widget
+  //   search.addWidget(
+  //       instantsearch.widgets.hits({
+  //         container: '#hits',
+  //         templates: {
+  //               empty: '<p class="info">No results were found with your current filters. <br/> <a class="button" href=".">Clear all the filters</a></p>',
+  //               item: '<em>Hit {{objectID}}</em>: {{{_highlightResult.content.value}}}'
+
+  //           }
+
+  //       })
+  //   );
+
+  search.start();
+</script>
