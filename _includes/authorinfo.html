@@ -1,0 +1,42 @@
+<div class="author-info">
+	<div class="author-img">
+		<img src={{ "assets/default_author.png" | relative_url }}>
+	</div><!-- .author-img -->
+	<div class="other-details">
+		<h4 class="author-name">John Doe</h4><!-- .author-name -->
+		<h5 class="post-date">{{ page.date | date: '%b %-d, %Y' }}</h5><!-- .post-date -->
+	</div><!-- .other-details -->
+</div><!-- .author-info -->
+
+<style>
+	.author-info {
+		width: 300px;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+	}
+	.author-img {
+		align-self: center;
+	}
+	.other-details {
+		padding-left: 5px;
+
+	}
+	.post-date {
+		color: #777;
+	}
+	.author-name, .post-date {
+		margin: 5px;
+		font-weight: normal;
+		font-family: 'Exo 2', sans-serif;
+		font-size: 1em;
+	}
+	h4 {
+
+	}
+	.author-img img {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+	}
+</style>
