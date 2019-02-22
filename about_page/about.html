@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | SVCE-ACM Blog</title>
+    <!-- Dependencies -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700" rel="stylesheet">
+    <!-- Minified General CSS -->
+    <style>
+        body{font-size:16px}a{color:rgb(1,130,172)}#main-container{padding:20px}#sidebar{padding-top:90px}#sidebar_inner{display:flex;flex-direction:column;align-items:center}@media screen and (max-width:1200px){#sidebar{margin-top:30px;border-top:2px solid #ccc}#sidebar_inner{flex-direction:row;justify-content:space-around}#ad{margin-top:auto!important}#main-container{padding:30px}#sidebar{padding:40px}}@media screen and (max-width:600px){#main-container{padding:15px}#sidebar{padding:20px 30px}#sidebar_inner{flex-direction:column;justify-content:space-around;align-items:stretch}#ad{margin-top:40px!important}}
+	</style>
+	<!-- Minified CSS for navbar -->
+    <style>
+    	#mainNav{background-color:white;}#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:white;border:0;background-color:#0182AC;font-family:'Exo 2',sans-serif}#mainNav .navbar-brand{padding:0!important}#mainNav .navbar-brand img{height:50px}#mainNav .navbar-nav .nav-item .nav-link{font-size:1em;font-weight:600;padding:.75em 0;letter-spacing:1px;color:black;font-family:'Exo 2',sans-serif}#mainNav .navbar-nav .nav-item .nav-link.active,#mainNav .navbar-nav .nav-item .nav-link:hover{color:#0182AC}@media (min-width:992px){#mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top 0.3s,padding-bottom 0.3s;-moz-transition:padding-top 0.3s,padding-bottom 0.3s;transition:padding-top 0.3s,padding-bottom 0.3s;border:none;background-color:transparent}#mainNav .navbar-brand{font-size:1.75em;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s}#mainNav .navbar-nav .nav-item .nav-link{padding:1.1em 1em!important}#mainNav.navbar-shrink{padding-top:0;padding-bottom:0;background-color:white}#mainNav.navbar-shrink .navbar-brand{font-size:1.25em}#mainNav .container{padding:10px;}}.searchbar {margin: 0.5em 0;display:none;}#search-icon{border:none; background:none;margin-top: 1.1em;
+    </style>
+    <!-- Minified CSS for sidebar -->
+    <style>
+    	.sidebar-title{font-family:'Montserrat',sans-serif}.list-group li{margin-bottom:7px;font-family:'Exo 2',sans-serif;font-weight:600}#ad{margin-top:15vh}@media screen and (max-width:1200px) and (min-width:768px){#popular-articles{max-width:50%}}
+	</style>
+    <!-- Minified CSS for footer -->
+    <style>
+    	#footer{background:#111;color:#ccc}#footer .container{padding:30px}form *{border-radius:3px;max-width:100%}.submit{background:rgb(1,130,172);cursor:pointer;border:none;color:white;padding:3px;transition:all .05s}.submit:hover{transform:scale(1.05)}#left-footer{border-right:3px solid #333;display:flex;flex-direction:column;justify-content:space-around}#right-footer{display:flex;flex-direction:column;justify-content:space-around}#newsletter{display:flex;flex-direction:column;margin:15px auto 30px}#newsletter h2{margin-bottom:15px}#social-buttons{display:flex;justify-content:space-evenly;max-width:60%;margin-bottom:30px}#social-buttons a{text-decoration:none;color:rgb(1,130,172)}#social-buttons a:hover{color:white}.main-site-link{text-decoration:underline;font-size:1.3em;color:#555}.main-site-link:hover{color:rgb(1,130,172)}.list-inline-item{border-color:#111;border-radius:50%;background:#222;width:55px;height:55px;display:inline-flex;justify-content:center;align-items:center}.contact-item{display:flex;margin:0 auto 5px;color:rgb(1,130,172);transition:all .05s}.contact-item:hover{transform:scaleX(1.03)}.contact-address{margin-left:10px;font-size:1.3em}.contact-address a{color:#999;text-decoration:none}#feedback{margin-top:20px}#contact-form *{margin-bottom:10px}.footer-title{font-family:'Montserrat',sans-serif}@media screen and (max-width:1024px){#social-buttons{max-width:90%}}@media screen and (max-width:768px){#left-footer{border-right:none}#contact-info{margin-bottom:20px}}
+	</style>
+</head>
+<body> 
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src=brandlogo.png></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item">
+                        <a id="home-link" class="nav-link" href=#>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="student-affairs-link" class="nav-link" href="#">Student Affairs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="professors-corner-link" class="nav-link" href="#">Professors' Corner</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="alumni-link" class="nav-link" href="#">Alumni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="about-link" class="nav-link active">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="career-center-link" class="nav-link" href="#">Career Center</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #nav -->
+    <div id="main-container" class="container-fluid">
+        <div class="row">
+            <div class="col-xl-8 offset-xl-1">
+				<!-- Edit here -->
+            </div>
+            <div id="sidebar" class="col-xl-3">
+                <div id="sidebar_inner">
+                    <div id="popular-articles">
+                        <h3 class="sidebar-title">Popular Articles</h3><!-- .sidebar-title -->
+                        <ul class="list-group" style="list-style: none;">
+                            <!-- <div class="borderless" style="list-style: none"> -->
+                            <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, at? Lorem ipsum dolor sit amet.</a></li>
+                            <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
+                            <!-- <div> -->
+                        </ul>
+                    </div><!-- #popular-articles -->
+                    <!----ads section --------->
+                    <div id="ad">
+                        <ul class="list-group" style="list-style-type:none;">
+                            <div class="borderless">
+                                <img src="http://videoadnews.com/wp-content/uploads/2018/03/mcdonalds.jpg" class="img-fluid" alt="Responsive image">
+                                <div>
+                        </ul>
+                    </div><!-- #ad -->
+                </div><!-- #sidebar_inner -->
+            </div><!-- #sidebar.col-md-3 -->
+        </div><!-- .row -->
+    </div><!-- #main-container.container-fluid -->
+    <!-- Footer of the site which will be present in all the pages -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div id="left-footer" class="col-md-6">
+                    <div id="newsletter">
+                        <h2 class="footer-title">Subscribe to our newsletter</h2>
+                        <form id="newsletter-sub" action="#">
+                            <input type="email" placeholder="Enter your email" required>
+                            <button class="submit" type="submit">Subscribe</button>
+                        </form>
+                    </div><!-- #newsletter -->
+                    <div id="social-buttons">
+                        <a href="https://www.facebook.com/SVCEACM/">
+                            <div class="list-inline-item">
+                                <i class="fab fa-facebook-f fa-fw fa-2x"></i>
+                            </div><!-- .list-inline-item -->
+                        </a>
+                        <a href="https://twitter.com/acm_svce">
+                            <div class="list-inline-item">
+                                <i class="fab fa-twitter fa-fw fa-2x"></i>
+                            </div><!-- .list-inline-item -->
+                        </a>
+                        <a href="https://www.instagram.com/svceacm/">
+                            <div class="list-inline-item">
+                                <i class="fab fa-instagram fa-fw fa-2x"></i>
+                            </div><!-- .list-inline-item -->
+                        </a>
+                        <a href="https://github.com/SVCE-ACM">
+                            <div class="list-inline-item">
+                                <i class="fab fa-github fa-fw fa-2x"></i>
+                            </div><!-- .list-inline-item -->
+                        </a>
+                    </div><!-- #social-buttons -->
+                </div><!-- .col-md-6 -->
+                <div id="right-footer" class="col-md-6">
+                    <div id="contact-info">
+                        <h2 class="footer-title">Contact Us</h2><!-- .text-center -->
+                        <div id="email" class="contact-item">
+                            <i class="fas fa-envelope fa-2x fa-fw"></i>
+                            <span id="email-id" class="contact-address"><a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a></span>
+                        </div>
+                    </div><!-- #contact -->
+                    <a href="http://svce.acm.org/" class="main-site-link">
+                        <h4>Back to main site</h4>
+                    </a>
+                </div><!-- .col-md-6 -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </footer><!-- #footer -->
+    <script>
+   		$('#main-container').css("margin-top", $('nav').height());
+    </script>
+</body>
+
+</html>
