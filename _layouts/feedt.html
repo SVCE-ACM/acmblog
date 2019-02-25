@@ -37,14 +37,16 @@ a:hover {
 .card-excerpt {
 	color: #777;
 }
-
+.post-author {
+    font-weight: bold;
+}
+.post-date {
+    color: #999;
+}
 .post-link:hover {
     text-decoration: none;
 }
-.post-info {
-	font-style: italic;
-    padding-top: 15px;
-}
+
 .card-img-top {
     /*object-fit: cover;*/
     max-width: 100%;
@@ -61,7 +63,7 @@ a:hover {
 
 @media screen and (min-width: 1024px) {
     .post-details {
-        max-height: 12em;
+        max-height: 14.4em;
         overflow: hidden;
     }
 }
@@ -118,9 +120,10 @@ a:hover {
                                 <div class="card-body">
                                     <div class="post-details">
                                         <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ site.posts.first.title }}</h2></a>
+                                        <p class="post-info"><span class="post-author">{{ site.posts.first.author }}</span> | <span class="post-date">{{ site.posts.first.date | date: '%b %-d, %Y'  }}</span></p><!-- .post-info -->
                                         <p class="card-excerpt">{{ site.posts.first.content | strip_html | truncatewords: 100 }}</p>
                                     </div><!-- .post-details -->
-                                    <p class="post-info text-right"><span class="post-date">At {{ site.posts.first.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ site.posts.first.author }}</span></p><!-- .post-date -->
+                                    <!-- <p class="post-info text-right"><span class="post-date">At {{ site.posts.first.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ site.posts.first.author }}</span></p> --><!-- .post-date -->
                                     <!-- .post-author -->
                                 </div> <!-- card-body -->
                             </div> <!-- card -->
@@ -134,10 +137,9 @@ a:hover {
                                         <div class="card-body">
                                             <div class="post-details">
                                                 <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ post.title }}</h2></a>
+                                                <p class="post-info"><span class="post-author">{{ post.author }}</span> | <span class="post-date">{{ post.date | date: '%b %-d, %Y'  }}</span></p><!-- .post-info -->
                                                 <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 100 }}</p>
                                             </div><!-- .post-details -->
-                                            <p class="post-info text-right"><span class="post-date">At {{ post.date | date: '%-I:%M %p, %-d %b' }}</span> by <span class="post-author">{{ post.author }}</span></p><!-- .post-date -->
-                                            <!-- .post-author -->
                                         </div> <!-- card-body -->
                                     </div> <!-- card -->
                             </div><!-- .col-lg-6 -->
