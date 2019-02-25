@@ -4,6 +4,7 @@ title:  "Welcome to custom post"
 date:   2019-02-04 18:37:41 +0530
 author: Yuvaraj
 categories: jekyll tag
+comments: true
 permalink: /y
 featured-img: https://cdn-images-1.medium.com/max/1100/1*wPs5_lAqG8qPpxjzdVR4ng.jpeg
 ---

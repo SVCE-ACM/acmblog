@@ -4,6 +4,7 @@ title:  "Welcome to Jekyll! Lorem ipsum dolor sit amet, consectetur adipisicing.
 date:   2019-02-05 18:37:41 +0530
 author: Tyler
 categories: jekyll update
+comments: true
 permalink: /x
 featured-img: https://cdn-images-1.medium.com/max/1100/1*wPs5_lAqG8qPpxjzdVR4ng.jpeg
 ---
