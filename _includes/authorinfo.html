@@ -4,7 +4,7 @@
 	</div><!-- .author-img -->
 	<div class="other-details">
 		<h4 class="author-name">{{ include.author }}</h4><!-- .author-name -->
-		<h5 class="post-date">{{ include.posted_date | date: '%b %-d, %Y' }}</h5><!-- .post-date -->
+		<h5 class="post-date">{{ include.posted_date | date: '%b %-d, %Y' }}{% if include.edited %} (edited) {% endif %}</h5><!-- .post-date -->
 	</div><!-- .other-details -->
 </div><!-- .author-info -->
 

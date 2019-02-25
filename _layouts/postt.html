@@ -86,7 +86,7 @@
 			<div class="col-xl-8 offset-xl-1">
 				<div class="post-title"><h1>{{ page.title }}</h1></div><!-- .post-title -->
 				<img src="{{ page.featured-img }}" class="featured-img">
-				{% include authorinfo.html author=page.author posted_date=page.date %}
+				{% include authorinfo.html author=page.author posted_date=page.date edited=page.edited %}
 				<div class="post-content">{{ content }}</div><!-- .post-content -->
 				{% if page.comments %}
 					<div id="disqus_thread"></div>

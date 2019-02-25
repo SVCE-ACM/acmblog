@@ -110,7 +110,7 @@ a:hover {
                                 <div class="card-body">
                                     <div class="post-details">
                                         <a class="post-link" href={{ site.posts.first.url | relative_url }}><h2 class="card-title">{{ site.posts.first.title }}</h2></a>
-                                        <p class="post-info"><span class="post-author">{{ site.posts.first.author }}</span> | <span class="post-date">{{ site.posts.first.date | date: '%b %-d, %Y'  }}</span></p><!-- .post-info -->
+                                        <p class="post-info"><span class="post-author">{{ site.posts.first.author }}</span> | <span class="post-date">{{ site.posts.first.date | date: '%b %-d, %Y'  }}{% if site.posts.first.edited %} (edited) {% endif %}</span></p><!-- .post-info -->
                                         <p class="card-excerpt">{{ site.posts.first.content | strip_html | truncatewords: 100 }}</p>
                                     </div><!-- .post-details -->
                                 </div> <!-- card-body -->
@@ -125,7 +125,7 @@ a:hover {
                                         <div class="card-body">
                                             <div class="post-details">
                                                 <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ post.title }}</h2></a>
-                                                <p class="post-info"><span class="post-author">{{ post.author }}</span> | <span class="post-date">{{ post.date | date: '%b %-d, %Y'  }}</span></p><!-- .post-info -->
+                                                <p class="post-info"><span class="post-author">{{ post.author }}</span> | <span class="post-date">{{ post.date | date: '%b %-d, %Y'  }}{% if post.edited %} (edited) {% endif %}</span></p><!-- .post-info -->
                                                 <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 100 }}</p>
                                             </div><!-- .post-details -->
                                         </div> <!-- card-body -->
