@@ -17,6 +17,7 @@ a:hover {
 #main-container {
     /*margin-top: 80px;*/
     padding: 80px;
+    padding-top: 0;
 }
 .feed-title {
 	font-family: 'Montserrat', sans-serif;
@@ -74,7 +75,6 @@ a:hover {
     }
     #main-container {
         padding: 30px;
-        padding-top: 80px;
     }
     #sidebar {
         padding: 40px;
@@ -88,7 +88,6 @@ a:hover {
 @media screen and (max-width: 600px) {
     #main-container {
         padding: 10px;
-        padding-top: 80px;
     }
     #sidebar {
         padding: 20px 30px;
@@ -151,8 +150,10 @@ a:hover {
             </div><!-- #sidebar.col-md-3 -->
         </div><!-- .row -->
     </div> <!-- container -->
-    {% include pagination.html %}
     {% include footer.html %}
+    <script>
+        $('#main-container').css("margin-top", $('nav').height());
+    </script>
 </body>
 
 </html>

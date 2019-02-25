@@ -40,3 +40,35 @@
         }
     }
 </style>
+
+<script>
+    var distance = $('#ad').offset().top,
+        $window = $(window),
+        isLargeScreen = window.matchMedia("(min-width: 1200px)");
+
+    function stickSideBar (isLargeScreen) {
+        if (isLargeScreen.matches) {
+            $window.scroll(function() {
+                if ( $window.scrollTop() + $('nav').height() >= distance ) {
+                    $('#ad').css({
+                        "position": "fixed",
+                        "margin-top": 0
+                    });
+                } else {
+                    $('#ad').css({
+                        "position": "",
+                        "margin-top": ""
+                    });
+                }
+            });
+        } else {
+            $window.unbind('scroll');
+            $('#ad').css({
+                "position": "",
+                "margin-top": ""
+            });
+        }
+    }
+    stickSideBar(isLargeScreen);
+    isLargeScreen.addListener(stickSideBar);
+</script>
