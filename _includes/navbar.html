@@ -23,11 +23,14 @@
                 <li class="nav-item">
                     <a id="about-link" class="nav-link" href={{ "/about" | relative_url }}>About</a>
                 </li>
-                <li>
+                <li class="nav-item">
+                    <a id="career-center-link" class="nav-link" href={{ "/career_center" | relative_url }}>Career Center</a>
+                </li>
+               <!--  <li>
                     <button type="submit" id="search-icon" onclick="searchbar()"><i class="fa fa-search"></i></button>
                 </li>
                 <div id="search-box" class = "searchbar"></div>
-                <div id ="hits"></div>
+                <div id ="hits"></div> -->
             </ul>
         </div>
     </div>
@@ -37,7 +40,7 @@
     $("#{{ include.navid }}").addClass('active');
     $("#{{ include.navid }}").removeAttr("href");
 </script>
-<script>
+<!-- <script>
     // searchbar toggling
     var y = 0;
     function searchbar(){
@@ -51,4 +54,4 @@
         }
     }
 </script>
-{% include search.html %}
+-->
