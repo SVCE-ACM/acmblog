@@ -23,6 +23,11 @@
 </div><!-- #sidebar_inner -->
 
 <style>
+    #sidebar_inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     .sidebar-title {
         font-family: 'Montserrat', sans-serif;
     }
@@ -34,9 +39,21 @@
 	#ad {
 		margin-top: 15vh;
 	}
-    @media screen and (max-width: 1200px) and (min-width: 768px) {
+    @media screen and (max-width: 1200px) and (min-width: 600px) {
         #popular-articles {
             max-width: 50%;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        #sidebar_inner {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        #sidebar_inner {
+            flex-direction: column;
+            justify-content: space-around;
         }
     }
 </style>
