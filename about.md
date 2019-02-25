@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: paget
 title: About
 permalink: /about/
 navid: about-link

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postt
 title:  "Welcome to custom post"
 date:   2019-02-04 18:37:41 +0530
 author: Yuvaraj

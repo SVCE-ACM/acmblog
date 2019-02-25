@@ -3,6 +3,7 @@ layout: postt
 title:  "Lorem ipsum dolor sit amet, consectetur adipisicing."
 date:   2019-02-03 18:37:41 +0530
 author: Yuvaraj
+author_img: https://svce-acm.github.io/acmblog/assets/default_author.png
 categories: jekyll tag
 permalink: /z
 featured-img: https://cdn-images-1.medium.com/max/1100/1*wPs5_lAqG8qPpxjzdVR4ng.jpeg
