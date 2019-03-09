@@ -77,12 +77,14 @@
                 if ( $window.scrollTop() + $('nav').height() >= distance ) {
                     $('#popular-articles').css({
                         "position": "fixed",
-                        "margin-top": 0
+                        "margin-top": 0,
+                        "width": $('#popular-articles').width()
                     });
                 } else {
                     $('#popular-articles').css({
                         "position": "",
-                        "margin-top": ""
+                        "margin-top": "",
+                        "width": ""
                     });
                 }
             });
