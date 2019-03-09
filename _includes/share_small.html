@@ -1,0 +1,106 @@
+<style>
+
+.fa-facebook-f {
+  color: #3B5998;
+}
+.fa-twitter {
+  color: #38A1F3;
+}
+.fa-linkedin-in {
+  color: #0077B5;
+}
+.fa-whatsapp-square {
+  color: #25D366;
+}
+.fa-get-pocket {
+  color: #ef4056;
+}
+.fa-share-alt {
+  color: rgb(1, 130, 172);
+}
+
+.mob-share-wrapper {
+  display: none;
+}
+.mob-share {
+  display: inline-flex;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: black;
+  transition: transform .4s;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+.mob-share-items {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  transition: background .5s;
+  /*padding-left: 15px;*/
+  border-radius: 30px;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.mob-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 10px;
+  transition: visibility .5s, opacity .5s;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.mob-item-wrapper a {
+  text-decoration: none;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+  .mob-share-wrapper {
+    display: inline-flex;
+  }
+  .mob-share-items {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+}
+</style>
+<div class="mob-share-wrapper">
+  <div class="mob-share-items">
+    <div class="mob-item-wrapper">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ include.url | absolute_url }}" target="_blank">
+          <i class="fab fa-facebook-f fa-2x fa-fw"></i>
+        </a>
+      <a href="https://twitter.com/share?url={{ include.url | absolute_url }} " target="_blank">
+          <i class="fab fa-twitter fa-fw fa-2x"></i>
+        </a>
+      <a href="whatsapp://send?text={{ include.url | absolute_url }}" data-action="share/whatsapp/share" target="_blank">
+          <i class="fab fa-whatsapp-square fa-fw fa-2x"></i>
+        </a>
+      <a href="https://www.linkedin.com/shareArticle?url={{ include.url | absolute_url }}" target="_blank">
+          <i class="fab fa-linkedin-in fa-fw fa-2x"></i>
+        </a>
+      <a href="https://getpocket.com/save?url={{ include.url | absolute_url }}" target="_blank">
+          <i class="fab fa-get-pocket fa-fw fa-2x"></i>
+        </a>
+    </div>
+    <div class="mob-share">
+      <i class="fas fa-share-alt fa-2x"></i>
+    </div> 
+  </div>
+  
+</div>

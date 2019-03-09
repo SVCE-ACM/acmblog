@@ -1,0 +1,135 @@
+<style>
+
+.fa-facebook-f {
+  color: #3B5998;
+}
+.fa-twitter {
+  color: #38A1F3;
+}
+.fa-linkedin-in {
+  color: #0077B5;
+}
+.fa-whatsapp-square {
+  color: #25D366;
+}
+.fa-get-pocket {
+  color: #ef4056;
+}
+.fa-share-alt {
+  color: rgb(1, 130, 172);
+}
+
+.share-wrapper {
+  display: inline-flex;
+  float: right;
+  position: fixed;
+  top: 30%;
+}
+.share {
+  display: inline-flex;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: black;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  transition: transform .4s;
+}
+
+.share.shown {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  transform: rotateZ(360deg);
+}
+
+.share-items {
+  display: inline-flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  transition: background .5s;
+  /*padding-left: 15px;*/
+  border-radius: 30px;
+  
+}
+
+.share-items.shown {
+  
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+.item-wrapper {
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  padding-top: 10px;
+  transition: visibility .5s, opacity .5s;
+}
+
+.item-wrapper a {
+  text-decoration: none;
+  padding-bottom: 10px;
+  color: black;
+}
+
+.item-wrapper.shown {
+  visibility: visible;
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  .share-items {
+    flex-direction: row-reverse;
+    padding-left: 0;
+    /*padding-right: 15px;*/
+  }
+}
+</style>
+<div class="share-wrapper">
+  <div class="share-items">
+    <div class="item-wrapper">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ include.url | absolute_url }}" target="_blank">
+          <i class="fab fa-facebook-f fa-2x fa-fw"></i>
+        </a>
+      <a href="https://twitter.com/share?url={{ include.url | absolute_url }} " target="_blank">
+          <i class="fab fa-twitter fa-fw fa-2x"></i>
+        </a>
+      <a href="https://www.linkedin.com/shareArticle?url={{ include.url | absolute_url }}" target="_blank">
+          <i class="fab fa-linkedin-in fa-fw fa-2x"></i>
+        </a>
+      <a href="https://getpocket.com/save?url={{ include.url | absolute_url }}" target="_blank">
+          <i class="fab fa-get-pocket fa-fw fa-2x"></i>
+        </a>
+    </div>
+    <div class="share">
+      <i class="fas fa-share-alt fa-2x"></i>
+    </div> 
+  </div>
+  
+</div>
+
+<script>
+  $('.share').click(function() {
+    $('.share-items').toggleClass('shown');
+    $('.item-wrapper').toggleClass('shown');
+    $(this).toggleClass('shown');
+  });
+
+  $(window).on('resize',function(){
+    if ($(window).width() > 1200) {
+      $('.share-wrapper').css("transform", "translateX(" + ($('.col-xl-2').width()-80) + "px)");
+    } else {
+      $('.share-wrapper').css("transform", "translateX(" + ($('.col-xl-2').width()-60) + "px)");
+    }
+  });
+  if ($(window).width() > 1200) {
+      $('.share-wrapper').css("transform", "translateX(" + ($('.col-xl-2').width()-80) + "px)");
+    } else {
+      $('.share-wrapper').css("transform", "translateX(" + ($('.col-xl-2').width()-60) + "px)");
+    }
+</script>

@@ -24,8 +24,10 @@
 			margin: 30px auto;
 			max-width: 1100px;
 		}
-		#sidebar {
-			padding-top: 90px;	
+		.mobile-share {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 30px;
 		}
 		.post-title {
 			font-family: 'Playfair Display', sans-serif;
@@ -36,7 +38,7 @@
 			margin: 0 auto;
 			font-family: 'Roboto', sans-serif;
 			font-size: 1.1em;
-			margin-bottom: 50px;
+			margin-bottom: 30px;
 		}
 
 		.sumome-share-client-large {
@@ -62,6 +64,12 @@
 		        overflow: hidden;
 		    }
 		}
+
+		@media screen and (max-width: 992px) {
+			.col-xl-2 {
+				display: none;
+			}
+		}
 		@media screen and (max-width: 600px) {
 		    #main-container {
 		        padding: 15px;
@@ -83,11 +91,17 @@
 	</div><!-- .featured-img -->
 	<div id="main-container" class="container-fluid">
 		<div class="row">
-			<div class="col-xl-8 offset-xl-1">
+			<div class="col-xl-2 col-lg-1">
+				{% include share.html %}
+			</div><!-- .col-xl-2 col-lg-1 -->
+			<div class="col-xl-8 col-lg-10">
 				<div class="post-title"><h1>{{ page.title }}</h1></div><!-- .post-title -->
 				<img src="{{ page.featured-img }}" class="featured-img">
 				{% include authorinfo.html author=page.author posted_date=page.date edited=page.edited %}
 				<div class="post-content">{{ content }}</div><!-- .post-content -->
+				<div class="mobile-share">
+					{% include share_small.html url=page.url %}
+				</div><!-- .mobile-share -->
 				{% if page.comments %}
 					<div id="disqus_thread"></div>
 					<script>
@@ -106,17 +120,12 @@
 					<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 				{% endif %}
 			</div>
-			<div id="sidebar" class="col-xl-3">
-                {% include sidebar_large.html %}
-            </div><!-- #sidebar.col-md-3 -->
 		</div><!-- .row -->
 	</div><!-- #main-container.container-fluid -->
     {% include footer.html %}
 	<script>
 		$('#main-container').css("margin-top", $('nav').height());
 	</script>
-	<!-- Sumo Share buttons -->
-	<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='21448b6ce2f4f653f63b7c2d4e13fe7a2e66db823f79ccb5ed73523e68ea5ad1';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
 </body>
 </html>
 
