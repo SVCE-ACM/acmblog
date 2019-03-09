@@ -82,19 +82,19 @@
 <div class="mob-share-wrapper">
   <div class="mob-share-items">
     <div class="mob-item-wrapper">
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ include.url | absolute_url }}" target="_blank">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ include.url }}" target="_blank">
           <i class="fab fa-facebook-f fa-2x fa-fw"></i>
         </a>
-      <a href="https://twitter.com/share?url={{ include.url | absolute_url }} " target="_blank">
+      <a href="https://twitter.com/share?url={{ site.url }}{{ include.url }} " target="_blank">
           <i class="fab fa-twitter fa-fw fa-2x"></i>
         </a>
-      <a href="whatsapp://send?text={{ include.url | absolute_url }}" data-action="share/whatsapp/share" target="_blank">
+      <a href="whatsapp://send?text={{ site.url }}{{ include.url }}" data-action="share/whatsapp/share" target="_blank">
           <i class="fab fa-whatsapp-square fa-fw fa-2x"></i>
         </a>
-      <a href="https://www.linkedin.com/shareArticle?url={{ include.url | absolute_url }}" target="_blank">
+      <a href="https://www.linkedin.com/shareArticle?url={{ site.url }}{{ include.url }}" target="_blank">
           <i class="fab fa-linkedin-in fa-fw fa-2x"></i>
         </a>
-      <a href="https://getpocket.com/save?url={{ include.url | absolute_url }}" target="_blank">
+      <a href="https://getpocket.com/save?url={{ site.url }}{{ include.url }}" target="_blank">
           <i class="fab fa-get-pocket fa-fw fa-2x"></i>
         </a>
     </div>

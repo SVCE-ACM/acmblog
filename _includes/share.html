@@ -93,16 +93,16 @@
 <div class="share-wrapper">
   <div class="share-items">
     <div class="item-wrapper">
-      <a href="https://www.facebook.com/sharer/sharer.php?u={{ include.url | absolute_url }}" target="_blank">
+      <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ include.url }}" target="_blank">
           <i class="fab fa-facebook-f fa-2x fa-fw"></i>
         </a>
-      <a href="https://twitter.com/share?url={{ include.url | absolute_url }} " target="_blank">
+      <a href="https://twitter.com/share?url={{ site.url }}{{ include.url }} " target="_blank">
           <i class="fab fa-twitter fa-fw fa-2x"></i>
         </a>
-      <a href="https://www.linkedin.com/shareArticle?url={{ include.url | absolute_url }}" target="_blank">
+      <a href="https://www.linkedin.com/shareArticle?url={{ site.url }}{{ include.url }}" target="_blank">
           <i class="fab fa-linkedin-in fa-fw fa-2x"></i>
         </a>
-      <a href="https://getpocket.com/save?url={{ include.url | absolute_url }}" target="_blank">
+      <a href="https://getpocket.com/save?url={{ site.url }}{{ include.url }}" target="_blank">
           <i class="fab fa-get-pocket fa-fw fa-2x"></i>
         </a>
     </div>
