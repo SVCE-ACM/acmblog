@@ -1,12 +1,13 @@
 <!-- Footer of the site which will be present in all the pages -->
 <style>
 	#footer {
-		background: #111;
-		color: #ccc;
+		background: #00588f;
+		color: #fff;
+		font-family: 'Exo 2', sans-serif;
 	}
 	
 	#footer .container {
-		padding: 30px;
+		padding: 5px;
 	}
 	form * {
 		border-radius: 3px;
@@ -24,7 +25,6 @@
 		transform: scale(1.05);
 	}
 	#left-footer {
-		border-right: 3px solid #333;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -33,24 +33,25 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
+		align-items: flex-end;
 	}
 	#newsletter {
 		display: flex;		
 	    flex-direction: column;
-		margin: 15px auto 30px;
 	}
-	#newsletter h2 {
-		margin-bottom: 15px;
+	#newsletter p {
+		margin-bottom: 0px;
 	}
 	#social-buttons {
 		display: flex;
 	    justify-content: space-evenly;
 	    max-width: 60%;
-	    margin-bottom: 30px;
+	    min-width: 300px;
 	}
 	#social-buttons a {
 		text-decoration: none;
-		color: rgb(1, 130, 172);
+		color: white;
+		font-size: 115%;
 	}
 
 	#social-buttons a:hover {
@@ -66,11 +67,11 @@
 		color: rgb(1, 130, 172);
 	}
     .list-inline-item {
-		border-color: #111;
-	    border-radius: 50%;
-	    background: #222;
-	    width: 55px;
-	    height: 55px;
+		/*border-color: #111;*/
+	    /*border-radius: 50%;*/
+	    /*background: #222;*/
+	    /*width: 55px;*/
+	    /*height: 55px;*/
 	    display: inline-flex;
 	    justify-content: center;
 	    align-items: center;
@@ -103,10 +104,6 @@
 		margin-bottom: 10px;
 	}
 
-	.footer-title {
-		font-family: 'Montserrat', sans-serif;
-	}
-
 	@media screen and (max-width: 1024px) {
 		#social-buttons {
 			max-width: 90%;
@@ -115,66 +112,47 @@
 	}
 	@media screen and (max-width: 768px) {
 		#left-footer {
-			border-right: none;
-		}		
-		#contact-info {
-			margin-bottom: 20px;
+			align-items: center;
 		}
+		#right-footer {
+			align-items: center;
+			margin-top: 1.35em;
+		}	
 	}
 
 </style>
+
 <footer id="footer">
 	<div class="container">
 	    <div class="row">
-	        <div id="left-footer" class="col-md-6">
+	        <div id="left-footer" class="col-sm-6">
 	            <div id="newsletter">
-	                <h2 class="footer-title">Subscribe to our newsletter</h2>
-	                <form id="newsletter-sub" action="#">
+	                <p>&copy; SVCE-ACM 2018. All Rights Reserved.</p>
+	                <!-- <form id="newsletter-sub" action="#">
 	                    <input type="email" placeholder="Enter your email" required>
 	                    <button class="submit" type="submit">Subscribe</button>
-	                </form>
+	                </form> -->
 	            </div><!-- #newsletter -->
-	            <div id="social-buttons">
+	            
+	        </div><!-- .col-md-6 -->
+	        <div id="right-footer" class="col-sm-6">
+				<div id="social-buttons" class="text-right">
 	                <a href="https://www.facebook.com/SVCEACM/">
-						<div class="list-inline-item">
-							<i class="fab fa-facebook-f fa-fw fa-2x"></i>
-						</div><!-- .list-inline-item -->
+							<i class="fab fa-facebook fa-2x fa-fw"></i>
 					</a>
 	                <a href="https://twitter.com/acm_svce">
-						<div class="list-inline-item">
-							<i class="fab fa-twitter fa-fw fa-2x"></i>
-						</div><!-- .list-inline-item -->
+							<i class="fab fa-twitter-square fa-fw fa-2x"></i>
 					</a>
 	     	    	<a href="https://www.instagram.com/svceacm/">
-						<div class="list-inline-item">
 							<i class="fab fa-instagram fa-fw fa-2x"></i>
-						</div><!-- .list-inline-item -->
 					</a>
 	                <a href="https://github.com/SVCE-ACM">
-						<div class="list-inline-item">
 							<i class="fab fa-github fa-fw fa-2x"></i>
-						</div><!-- .list-inline-item -->
+					</a>
+					<a href="https://github.com/SVCE-ACM">
+							<i class="fas fa-envelope fa-fw fa-2x"></i>
 					</a>
 	            </div><!-- #social-buttons -->
-	        </div><!-- .col-md-6 -->
-	        <div id="right-footer" class="col-md-6">
-	            <div id="contact-info">
-	            	<h2 class="footer-title">Contact Us</h2><!-- .text-center -->
-	            	<div id="email" class="contact-item">
-	            		<i class="fas fa-envelope fa-2x fa-fw"></i>
-	            		<span id="email-id" class="contact-address"><a href="mailto:acm.svcecse@gmail.com">acm.svcecse@gmail.com</a></span>
-	            	</div>
-	            </div><!-- #contact -->
-	            <!-- <div id="feedback">
-	            	<h2 class="footer-title">Have any feedback?</h2>
-	            	<form id="contact-form" action="#">
-	            		<input type="text" name="name" placeholder="Your name"><br>
-	            		<textarea name="feedback-text" cols="40" rows="4" placeholder="Enter your feedback"></textarea><br>
-	            		<button class="submit" type="submit">Submit</button>
-	            	</form>
-	            </div>#contact-form -->
-	            <a href="http://svce.acm.org/" class="main-site-link"><h4>Back to main site</h4></a>
-
 	        </div><!-- .col-md-6 -->
 	    </div><!-- .row -->
 	</div><!-- .container -->

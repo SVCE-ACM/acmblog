@@ -1,5 +1,12 @@
 <!-- Sidebar for larger screens (>1024px) which will contain popular articles and ads -->
 <div id="sidebar_inner">
+    <div id="newsletter">
+        <h2 class="sidebar-title">Subscribe to our newsletter</h2>
+        <form id="newsletter-sub" action="#">
+            <input type="email" placeholder="Enter your email" required>
+            <button class="submit" type="submit"><b>Subscribe</b></button>
+        </form>
+    </div><!-- #newsletter -->
     <div id="popular-articles">
         <h3 class="sidebar-title">Popular Articles</h3><!-- .sidebar-title -->
         <ul class="list-group" style="list-style: none;">
@@ -13,13 +20,13 @@
         </ul>
     </div><!-- #popular-articles -->
     <!----ads section --------->
-    <div id="ad">
+    <!-- <div id="ad">
         <ul class="list-group" style="list-style-type:none;">
             <div class="borderless">
                 <img src="http://videoadnews.com/wp-content/uploads/2018/03/mcdonalds.jpg" class="img-fluid" alt="Responsive image">
             <div>
         </ul>
-    </div><!-- #ad -->
+    </div> --><!-- #ad -->
 </div><!-- #sidebar_inner -->
 
 <style>
@@ -36,8 +43,9 @@
         font-family: 'Exo 2', sans-serif;
         font-weight: 600;
     }
-	#ad {
-		margin-top: 15vh;
+	#popular-articles {
+		margin-top: 10vh;
+        max-width: 350px;
 	}
     @media screen and (max-width: 1200px) and (min-width: 600px) {
         #popular-articles {
@@ -59,7 +67,7 @@
 </style>
 
 <script>
-    var distance = $('#ad').offset().top,
+    var distance = $('#popular-articles').offset().top,
         $window = $(window),
         isLargeScreen = window.matchMedia("(min-width: 1200px)");
 
@@ -67,12 +75,12 @@
         if (isLargeScreen.matches) {
             $window.scroll(function() {
                 if ( $window.scrollTop() + $('nav').height() >= distance ) {
-                    $('#ad').css({
+                    $('#popular-articles').css({
                         "position": "fixed",
                         "margin-top": 0
                     });
                 } else {
-                    $('#ad').css({
+                    $('#popular-articles').css({
                         "position": "",
                         "margin-top": ""
                     });
@@ -80,7 +88,7 @@
             });
         } else {
             $window.unbind('scroll');
-            $('#ad').css({
+            $('#popular-articles').css({
                 "position": "",
                 "margin-top": ""
             });
