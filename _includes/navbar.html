@@ -26,11 +26,10 @@
                 <li class="nav-item">
                     <a id="career-center-link" class="nav-link" href={{ "/career_center" | relative_url }}>Career Center</a>
                 </li>
-               <!--  <li>
-                    <button type="submit" id="search-icon" onclick="searchbar()"><i class="fa fa-search"></i></button>
-                </li>
-                <div id="search-box" class = "searchbar"></div>
-                <div id ="hits"></div> -->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+                    <div id="results-container" class="hits"></div>
+                </form>
             </ul>
         </div>
     </div>
@@ -40,18 +39,18 @@
     $("#{{ include.navid }}").addClass('active');
     $("#{{ include.navid }}").removeAttr("href");
 </script>
-<!-- <script>
-    // searchbar toggling
-    var y = 0;
-    function searchbar(){
-        if(y == 0){
-            $("#search-box").show("slow");
-            y=1;
-        }
-        else if(y==1){
-            $("#search-box").hide("slow");
-            y = 0;
-        }
-    }
+<!-- script pointing to search-script.js -->
+<script src="{{ site.baseurl }}/search-script.js"></script>
+
+<!-- Configuration -->
+<script>
+    window.simpleJekyllSearch = new SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '{{ site.baseurl }}/search.json',
+      noResultsText: 'No results found',
+      limit: 3,
+      fuzzy: false,
+      searchResultTemplate: '<li><img src="{{ site.featured-img }}{featured-img}" style="{width:3%; height:3%;}"> <a href="{{ site.url }}{url}">{title}</a><br>by {author}</li>'
+    })
 </script>
--->
