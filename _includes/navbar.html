@@ -26,8 +26,8 @@
                 <li class="nav-item">
                     <a id="career-center-link" class="nav-link" href={{ "/career_center" | relative_url }}>Career Center</a>
                 </li>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input">
+                <form class="form-inline my-2 my-lg-0" method="get" action="{{ site.baseurl }}/search_results.html">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input" name="searchInput">
                     <div id="results-container" class="hits"></div>
                 </form>
             </ul>
@@ -38,19 +38,4 @@
 <script>
     $("#{{ include.navid }}").addClass('active');
     $("#{{ include.navid }}").removeAttr("href");
-</script>
-<!-- script pointing to search-script.js -->
-<script src="{{ site.baseurl }}/search-script.js"></script>
-
-<!-- Configuration -->
-<script>
-    window.simpleJekyllSearch = new SimpleJekyllSearch({
-      searchInput: document.getElementById('search-input'),
-      resultsContainer: document.getElementById('results-container'),
-      json: '{{ site.baseurl }}/search.json',
-      noResultsText: 'No results found',
-      limit: 3,
-      fuzzy: false,
-      searchResultTemplate: '<li><img src="{{ site.featured-img }}{featured-img}" style="{width:3%; height:3%;}"> <a href="{{ site.url }}{url}">{title}</a><br>by {author}</li>'
-    })
 </script>
