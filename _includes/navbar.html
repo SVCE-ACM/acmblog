@@ -1,5 +1,5 @@
 <!-- Navbar which will be present at the top of all pages.-->
-<style>#mainNav{background-color:white;}#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:white;border:0;background-color:#0182AC;font-family:'Exo 2',sans-serif}#mainNav .navbar-brand{padding:0!important}#mainNav .navbar-brand img{height:50px}#mainNav .navbar-nav .nav-item .nav-link{font-size:1em;font-weight:600;padding:.75em 0;letter-spacing:1px;color:black;font-family:'Exo 2',sans-serif}#mainNav .navbar-nav .nav-item .nav-link.active,#mainNav .navbar-nav .nav-item .nav-link:hover{color:#0182AC}@media (min-width:992px){#mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top 0.3s,padding-bottom 0.3s;-moz-transition:padding-top 0.3s,padding-bottom 0.3s;transition:padding-top 0.3s,padding-bottom 0.3s;border:none;background-color:transparent}#mainNav .navbar-brand{font-size:1.75em;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s}#mainNav .navbar-nav .nav-item .nav-link{padding:1.1em 1em!important}#mainNav.navbar-shrink{padding-top:0;padding-bottom:0;background-color:white}#mainNav.navbar-shrink .navbar-brand{font-size:1.25em}#mainNav .container{padding:10px;}}.searchbar {margin: 0.5em 0;display:none;}#search-icon{border:none; background:none;margin-top: 1.1em;</style>
+<style>#mainNav{background-color:white;}#mainNav .navbar-toggler{font-size:12px;right:0;padding:13px;text-transform:uppercase;color:white;border:0;background-color:#0182AC;font-family:'Exo 2',sans-serif}#mainNav .navbar-brand{padding:0!important}#mainNav .navbar-brand img{height:50px}#mainNav .navbar-nav .nav-item .nav-link{font-size:1em;font-weight:600;padding:.75em 0;letter-spacing:1px;color:black;font-family:'Exo 2',sans-serif}#mainNav .navbar-nav .nav-item .nav-link.active,#mainNav .navbar-nav .nav-item .nav-link:hover{color:#0182AC}@media (min-width:992px){#mainNav{padding-top:25px;padding-bottom:25px;-webkit-transition:padding-top 0.3s,padding-bottom 0.3s;-moz-transition:padding-top 0.3s,padding-bottom 0.3s;transition:padding-top 0.3s,padding-bottom 0.3s;border:none;background-color:transparent}#mainNav .navbar-brand{font-size:1.75em;-webkit-transition:all 0.3s;-moz-transition:all 0.3s;transition:all 0.3s}#mainNav .navbar-nav .nav-item .nav-link{padding:1.1em 1em!important}#mainNav.navbar-shrink{padding-top:0;padding-bottom:0;background-color:white}#mainNav.navbar-shrink .navbar-brand{font-size:1.25em}#mainNav .container{padding:10px;}}#searchform{margin: 30% 0 0 15%;}</style>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink animated fadeInDown" id="mainNav">
     <div class="container">
         <a class="navbar-brand" href="#page-top"><img src={{ "assets/brandlogo.png" | relative_url }}></a>
@@ -26,10 +26,13 @@
                 <li class="nav-item">
                     <a id="career-center-link" class="nav-link" href={{ "/career_center" | relative_url }}>Career Center</a>
                 </li>
-                <form class="form-inline my-2 my-lg-0" method="get" action="{{ site.baseurl }}/search_results.html">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="search-input" name="searchInput">
-                    <div id="results-container" class="hits"></div>
-                </form>
+                <li>
+                    <form action="search_results.html" id="searchform">
+                      <button type="submit" class="btn btn-default" id="searchbtn">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </form>
+                </li>
             </ul>
         </div>
     </div>

@@ -23,14 +23,7 @@
   noResultsText: 'No results found',
   limit: 3,
   fuzzy: false,
-  searchResultTemplate: '<br><li><img src="{{ site.featured-img }}{featured-img}" class="img-fluid"><br> <a href="{{ site.url }}{url}">{title}</a><br>by {author}</li>'
+  searchResultTemplate: '<br><li><img src= {{ "assets/brandlogo.png" | relative_url }} class="img-fluid"><br> <a href="{url}">{title}</a><br>by {author}</li>'
 })
-</script>
-<script>
-	var url_string = window.location.href;
-	var url = new URL(url_string);
-	var searchInput = url.searchParams.get("searchInput");
-	document.getElementById('search-input').value = searchInput;
-  sjs.search(searchInput);
 </script>
 </html>
