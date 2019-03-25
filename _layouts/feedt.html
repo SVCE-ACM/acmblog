@@ -56,6 +56,33 @@ a:hover {
 #sidebar {
 	padding-top: 90px;	
 }
+#results-container {
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-top: 3px;
+    background: #eee;
+    padding-left: 5px;
+}
+
+.img-fluid {
+    width:75px;
+}
+.search-result {
+    list-style: none;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 600;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    padding: 5px;
+}
+.search-img {
+    display: flex;
+    align-items: center;
+}
+.search-item {
+    margin-left: 10px;
+}
 
 
 @media screen and (min-width: 1024px) {
@@ -104,6 +131,7 @@ a:hover {
             <div class="col-xl-8 offset-xl-1">              
                 <div class="row">
                     <!-- Putting the latest post at the top -->
+                    
                     <div class="col-md-12">
                         <div class="card">
                                 <a href={{ site.posts.first.url | relative_url }}><img src="{{ site.posts.first.featured-img }}" alt="" class="card-img-top"></a>
@@ -133,6 +161,15 @@ a:hover {
                             </div><!-- .col-lg-6 -->
                         {% endif %}
                     {% endfor %}
+                    <div class="col-md-12">
+                        <div id="search">
+                            <h2 class="sidebar-title">Search</h2><!-- .sidebar-title -->
+                            <form class="form my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" aria-label="Search" id="search-input" placeholder="Search any text">
+                            </form>
+                            <div id="results-container" class="hits"></div>
+                        </div><!-- #search -->
+                    </div><!-- .col-md-12 -->
                 </div><!-- .row -->
             </div>
             <div id="sidebar" class="col-xl-3">
@@ -143,6 +180,19 @@ a:hover {
     {% include footer.html %}
     <script>
         $('#main-container').css("margin-top", $('nav').height());
+    </script>
+    <script src="https://cdn.rawgit.com/christian-fei/Simple-Jekyll-Search/master/dest/simple-jekyll-search.min.js"></script>
+
+    <script type="text/javascript">
+      var sjs = new SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: 'search.json',
+      noResultsText: 'No results found',
+      limit: 3,
+      fuzzy: false,
+      searchResultTemplate: '<li class="search-result"><div class="search-img"><img src= {{ "assets/brandlogo.png" | relative_url }} class="img-fluid"></div><!-- .search-img --><div class="search-item"><a href="{url}">{title}</a><br>by {author}</div><!-- .search-item --></li>'
+    })
     </script>
 </body>
 
