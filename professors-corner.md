@@ -1,6 +1,6 @@
 ---
 
 layout: feedt
-title: Home
-navid: home-link
+title: Professors' Corner
+navid: professors-corner-link
 ---

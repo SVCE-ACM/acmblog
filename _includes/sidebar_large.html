@@ -7,26 +7,7 @@
             <button class="submit" type="submit"><b>Subscribe</b></button>
         </form>
     </div><!-- #newsletter -->
-    <div id="popular-articles">
-        <h3 class="sidebar-title">Popular Articles</h3><!-- .sidebar-title -->
-        <ul class="list-group" style="list-style: none;">
-            <!-- <div class="borderless" style="list-style: none"> -->
-                <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetur.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, at? Lorem ipsum dolor sit amet.</a></li>
-                <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing.</a></li>
-            <!-- <div> -->
-        </ul>
-    </div><!-- #popular-articles -->
-    <!----ads section --------->
-    <!-- <div id="ad">
-        <ul class="list-group" style="list-style-type:none;">
-            <div class="borderless">
-                <img src="http://videoadnews.com/wp-content/uploads/2018/03/mcdonalds.jpg" class="img-fluid" alt="Responsive image">
-            <div>
-        </ul>
-    </div> --><!-- #ad -->
+    
 </div><!-- #sidebar_inner -->
 
 <style>
@@ -85,7 +66,7 @@
 </style>
 
 <script>
-    var distance = $('#popular-articles').offset().top,
+    var distance = $('#newsletter').offset().top,
         $window = $(window),
         isLargeScreen = window.matchMedia("(min-width: 1200px)");
 
@@ -93,13 +74,13 @@
         if (isLargeScreen.matches) {
             $window.scroll(function() {
                 if ( $window.scrollTop() + $('nav').height() >= distance ) {
-                    $('#popular-articles').css({
+                    $('#newsletter').css({
                         "position": "fixed",
                         "margin-top": 0,
-                        "width": $('#popular-articles').width()
+                        "width": $('#newsletter').width()
                     });
                 } else {
-                    $('#popular-articles').css({
+                    $('#newsletter').css({
                         "position": "",
                         "margin-top": "",
                         "width": ""
@@ -108,7 +89,7 @@
             });
         } else {
             $window.unbind('scroll');
-            $('#popular-articles').css({
+            $('#newsletter').css({
                 "position": "",
                 "margin-top": ""
             });
