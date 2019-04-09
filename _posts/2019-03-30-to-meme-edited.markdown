@@ -4,7 +4,7 @@ title:  "To Meme, Or Not to Meme"
 date:   2019-03-30 18:37:41 +0530
 author: Sriram
 author_img: https://svce-acm.github.io/acmblog/assets/default_author.png
-categories: student article general
+categories: [student, article, general, all]
 permalink: /to-meme-or-not-to-meme
 featured-img: https://i.imgur.com/hgAlL15.jpg
 comments: true

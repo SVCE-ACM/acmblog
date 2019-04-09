@@ -4,9 +4,9 @@ title:  "Interview with Mrs.Sowmya Mahadevan"
 date:   2019-03-31
 author: Sai Janani
 author_img: https://svce-acm.github.io/acmblog/assets/default_author.png
-categories: interview alumni
+categories: [interview, alumni, all]
 permalink: /interview-with-mrs-sowmya-mahadevan
-featured-img: https://i.imgur.com/SGqAN3R.png
+featured-img: https://i.imgur.com/QhmOTKA.png
 comments: true
 ---
 

@@ -4,9 +4,9 @@ title:  "Interview with Dr. K S Gayathri"
 date:   2019-03-26
 author: Mahalakshumi
 author_img: https://svce-acm.github.io/acmblog/assets/default_author.png
-categories: interview professor
+categories: [interview, professor, all]
 permalink: /interview-with-dr-ks-gayathri
-featured-img: https://i.imgur.com/SGqAN3R.png
+featured-img: https://i.imgur.com/QhmOTKA.png
 comments: true
 ---
 

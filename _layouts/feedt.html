@@ -130,35 +130,37 @@ a:hover {
         <div class="row">
             <div class="col-xl-8 offset-xl-1">              
                 <div class="row">
-                    <!-- Putting the latest post at the top -->
-                    
-                    <div class="col-md-12">
-                        <div class="card">
-                                <a href={{ site.posts.first.url | relative_url }}><img src="{{ site.posts.first.featured-img }}" alt="" class="card-img-top"></a>
-                                <div class="card-body">
-                                    <div class="post-details">
-                                        <a class="post-link" href={{ site.posts.first.url | relative_url }}><h2 class="card-title">{{ site.posts.first.title }}</h2></a>
-                                        <p class="post-info"><span class="post-author">{{ site.posts.first.author }}</span> | <span class="post-date">{{ site.posts.first.date | date: '%b %-d, %Y'  }}{% if site.posts.first.edited %} (edited) {% endif %}</span></p><!-- .post-info -->
-                                        <p class="card-excerpt">{{ site.posts.first.content | strip_html | truncatewords: 100 }}</p>
-                                    </div><!-- .post-details -->
-                                </div> <!-- card-body -->
-                            </div> <!-- card -->
-                    </div><!-- .col-lg-12 -->
-                    <!-- Putting the remaining post in a two-col layout -->
-                    {% for post in site.posts %}
-                        {% if forloop.index > 1 %}
-                            <div class="col-md-6">
+                    {% for site_category in site.categories %} 
+                        {% if page.category == site_category[0] %}
+                            <div class="col-md-12">
                                 <div class="card">
-                                        <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
+                                        <a href={{ site_category[1].first.url | relative_url }}><img src="{{ site_category[1].first.featured-img }}" alt="" class="card-img-top"></a>
                                         <div class="card-body">
                                             <div class="post-details">
-                                                <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ post.title }}</h2></a>
-                                                <p class="post-info"><span class="post-author">{{ post.author }}</span> | <span class="post-date">{{ post.date | date: '%b %-d, %Y'  }}{% if post.edited %} (edited) {% endif %}</span></p><!-- .post-info -->
-                                                <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 100 }}</p>
+                                                <a class="post-link" href={{ site_category[1].first.url | relative_url }}><h2 class="card-title">{{ site_category[1].first.title }}</h2></a>
+                                                <p class="post-info"><span class="post-author">{{ site_category[1].first.author }}</span> | <span class="post-date">{{ site_category[1].first.date | date: '%b %-d, %Y'  }}{% if site_category[1].first.edited %} (edited) {% endif %}</span></p><!-- .post-info -->
+                                                <p class="card-excerpt">{{ site_category[1].first.content | strip_html | truncatewords: 100 }}</p>
                                             </div><!-- .post-details -->
                                         </div> <!-- card-body -->
                                     </div> <!-- card -->
-                            </div><!-- .col-lg-6 -->
+                            </div><!-- .col-lg-12 -->
+                            <!-- Putting the remaining post in a two-col layout -->
+                            {% for post in site_category[1] %}
+                                {% if forloop.index > 1 %}
+                                    <div class="col-md-6">
+                                        <div class="card">
+                                                <a href={{ post.url | relative_url }}><img src="{{ post.featured-img }}" alt="" class="card-img-top"></a>
+                                                <div class="card-body">
+                                                    <div class="post-details">
+                                                        <a class="post-link" href={{ post.url | relative_url }}><h2 class="card-title">{{ post.title }}</h2></a>
+                                                        <p class="post-info"><span class="post-author">{{ post.author }}</span> | <span class="post-date">{{ post.date | date: '%b %-d, %Y'  }}{% if post.edited %} (edited) {% endif %}</span></p><!-- .post-info -->
+                                                        <p class="card-excerpt">{{ post.content | strip_html | truncatewords: 100 }}</p>
+                                                    </div><!-- .post-details -->
+                                                </div> <!-- card-body -->
+                                            </div> <!-- card -->
+                                    </div><!-- .col-lg-6 -->
+                                {% endif %}
+                            {% endfor %}
                         {% endif %}
                     {% endfor %}
                     <div class="col-md-12">

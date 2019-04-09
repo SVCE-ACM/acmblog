@@ -4,12 +4,11 @@ title:  "Interview with Dr. Arun Janarthanan"
 date:   2019-03-26
 author: Aparajita
 author_img: https://svce-acm.github.io/acmblog/assets/default_author.png
-categories: interview alumni
+categories: [interview, alumni, all]
 permalink: /interview-with-arun-janarthanan
-featured-img: https://i.imgur.com/SGqAN3R.png
+featured-img: https://i.imgur.com/QhmOTKA.png
 comments: true
 ---
-
 
 **What is your experience in SVCE as a student?**
 

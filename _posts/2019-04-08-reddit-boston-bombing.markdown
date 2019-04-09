@@ -4,7 +4,7 @@ title:  "Deep Dive into the Archives: Reddit & the Boston Bombing"
 date:   2019-03-31
 author: Mahalakshumi
 author_img: https://svce-acm.github.io/acmblog/assets/default_author.png
-categories: article general student
+categories: [article, general, student, all]
 permalink: /reddit-boston-bombing
 featured-img: https://i.imgur.com/qfJbKrA.png
 comments: true
