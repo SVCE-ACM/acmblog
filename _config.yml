@@ -38,6 +38,8 @@ algolia:
   search_only_api_key: 'a90b5867f7165792629f5efc84a4835c'
   nodes_to_index: 'article'
 
+# Google Analytics
+google_analytics: UA-138009901-1
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
